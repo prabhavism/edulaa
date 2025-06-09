@@ -1,0 +1,22 @@
+[
+    {
+        "username": "1@gmail.com",
+        "name": "1",
+        "password": "$2b$12$VNGpXMU8lBnSPFEZgusOQeS/7CJz1I9xhZJWVBGIPP4kHLjlEOY6u"
+    },
+    {
+        "username": "2@gmail.com",
+        "name": "2",
+        "password": "$2b$12$T/V6.3/8aH85S2TNKxhTDO0xkqI.2EqDV3pJDMuWfGOhfqgZllR5C"
+    },
+    {
+        "username": "3@gmail.com",
+        "name": "3",
+        "password": "$2b$12$7bDfgEFWtkx12/E0ccshJ.r6efssre4hDBlSpEK72ObFk6VPht77K"
+    },
+    {
+        "username": "4@gmail.com",
+        "name": "4",
+        "password": "$2b$12$GKFjvMVAevDCsBG6wUVsDeMVQU/OCTI5mwkYq065YTK78Wj.8ABYS"
+    }
+]
