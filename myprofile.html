@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My profile</title>
+        <link href = "myprofile.css" rel="stylesheet">
+    </head>
+        <body>
+            <div class="profile-container">
+                <div class="profile-header">
+                <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Profile Picture" class="profile-pic">
+                <h2>Rohan Sivadas</h2>
+                <p>ID: STU123456</p>
+                <button>Edit Profile</button>
+                </div>
+
+                <div class="profile-section">
+                <h3>Enrolled Courses</h3>
+                <ul>
+                    <li>Mathematics</li>
+                    <li>Computer</li>
+                </ul>
+                </div>
+
+                <div class="profile-section">
+                <h3>Achievements</h3>
+                <p>&gt;none</p>
+                
+                <div class="profile-header">
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div>
+            <script>
+                function logout(){
+                    window.location.href = "login.html";
+                }
+            </script>
+
+        </body>
+</html>

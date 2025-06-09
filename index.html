@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Edula</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style_edula.css" />
+</head>
+<body>
+  <!-- Header/Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-left"></div>
+      <div class="logo">
+        <span style="font-size:2.2rem; vertical-align:middle;">🎓</span> Edula
+      </div>
+      <div class="nav-right">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search courses..." />
+          <span class="search-icon" onclick="searchCourses()">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </span>
+        </div>
+        <button class="nav-btn" onclick="window.location.href='login.html'">Login</button>
+        <button class="nav-btn" onclick="window.location.href='register.html'">Register</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Typewriter Animation Section -->
+  <section class="catchphrase-container">
+    <div class="catchphrase">
+      <h1>Where Curiosity Meets Mastery.</h1>
+      <p>Ignite your passion for learning, one subject at a time.</p>
+    </div>
+  </section>
+
+  <!-- Slides Section -->
+  <section class="slides-section">
+    <div class="slides-container" id="slidesContainer">
+      <!-- Slides inserted by JS -->
+    </div>
+  </section>
+
+  <!-- Faculty Section -->
+  <section class="faculty-section">
+    <div class="faculty-title">Meet Our Faculty</div>
+    <div class="faculty-list" id="facultyList">
+      <!-- Faculty cards inserted by JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>&copy; 2025 Edula. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="javascript:void(0);" onclick="openContactModal()">Contact</a> |
+      <a href="#">Help & FAQ</a>
+    </div>
+  </footer>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeContactModal()">&times;</span>
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:contact@edula.com">contact@edula.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919694206969">+91 96942069696</a></p>
+        <p><strong>GitHub:</strong> 
+          <a href="https://github.com/danknik" target="_blank">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:22px;vertical-align:middle;margin-right:5px;">
+            github.com/danknik
+          </a>
+        </p>
+        <p><strong>Instagram:</strong> 
+          <a href="https://instagram.com/edula" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" style="width:20px;vertical-align:middle;margin-right:5px;filter:invert(32%) sepia(75%) saturate(7499%) hue-rotate(328deg) brightness(90%) contrast(95%);">
+            @edula
+          </a>
+        </p>
+        <p><strong>Facebook:</strong> 
+          <a href="https://facebook.com/edula" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" style="width:20px;vertical-align:middle;margin-right:5px;filter:invert(27%) sepia(97%) saturate(749%) hue-rotate(182deg) brightness(94%) contrast(94%);">
+            facebook.com/edula
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script_edula.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Computer Science Course Registration</title>
+  <link rel="stylesheet" href="style_cs-registration.css" />
+  <script src="script_cs-registration.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Computer Science Course Registration</h1>
+    <p>Build the future with code — enroll in our CS course today.</p>
+  </header>
+
+  <section class="course-info">
+    <h2>About the Computer Science Course</h2>
+    <p>This course dives into programming, data structures, algorithms, and system design. Whether you're a budding developer or a curious learner, this course equips you with the technical foundation to build software and understand computational thinking.</p>
+    <p><strong>Duration:</strong> 14 weeks</p>
+    <p><strong>Instructor:</strong> Prof. James Lin, MSc in Computer Engineering</p>
+    <p><strong>Goals:</strong></p>
+    <p>Master core CS principles and practical skills to create real-world software applications and prepare for careers in technology.</p>
+  </section>
+
+  <section>
+    <form action="submit-registration.html" method="POST">
+      <h3>Register for Computer Science Course</h3>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="level">Select Course Level:</label>
+      <select id="level" name="level" required>
+        <option value="" disabled selected>Select level</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+
+      <button type="submit">Register Now</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Contact us at info@computersciencecourse.com | Follow us on social media</p>
+  </footer>
+
+</body>
+</html>
