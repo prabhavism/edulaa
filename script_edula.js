@@ -129,9 +129,6 @@ document.getElementById('contactModal').addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeContactModal();
 });
-function toggleMenu() {
-  const nav = document.getElementById('navItems');
-  nav.classList.toggle('active');
 }
 renderSlides(subjects);
 renderFaculties();
