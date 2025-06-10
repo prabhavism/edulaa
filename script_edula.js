@@ -102,6 +102,13 @@ function searchCourses() {
     renderSlides(subjects);
     return;
   }
+  function toggleMenu() {
+  const nav = document.getElementById('navItems');
+  const btn = document.querySelector('.hamburger');
+  const expanded = nav.classList.toggle('active');
+  btn.setAttribute('aria-expanded', expanded);
+}
+
   const filtered = subjects.filter(s =>
     s.name.toLowerCase().includes(query) ||
     s.faculty.toLowerCase().includes(query) ||
