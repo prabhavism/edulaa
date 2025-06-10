@@ -90,3 +90,68 @@ body {
 .profile-section a:hover {
   text-decoration: underline;
 }
+@media (max-width: 900px) {
+  .profile-container {
+    max-width: 98vw;
+    padding: 18px;
+    margin: 24px 1vw;
+  }
+  .profile-header h2 {
+    font-size: 1.3rem;
+  }
+  .profile-header button {
+    padding: 7px 13px;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 8px 2vw;
+    border-radius: 10px;
+    margin: 10px 0;
+  }
+  .profile-header {
+    margin-bottom: 18px;
+  }
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+    border-width: 2px;
+  }
+  .profile-header h2 {
+    font-size: 1.05rem;
+    margin: 6px 0 2px 0;
+  }
+  .profile-header p {
+    font-size: 0.9rem;
+  }
+  .profile-header button {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+  .profile-section h3 {
+    font-size: 1rem;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+  .profile-section li {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .profile-container {
+    padding: 4px 1vw;
+    border-radius: 6px;
+  }
+  .profile-header h2 {
+    font-size: 0.95rem;
+  }
+}
+
