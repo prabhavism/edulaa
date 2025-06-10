@@ -381,4 +381,65 @@ footer {
 }
 .portfolio-btn:hover {
   background-color: #1d4ed8;
+} 
+/* Mobile (default) styles already in place */
+
+/* Tablet: 600px+ */
+@media (min-width: 600px) {
+  .catchphrase h1 { font-size: 3.5rem; }
+  .slide { flex: 0 0 45%; }
+}
+
+/* Small desktop: 900px+ */
+@media (min-width: 900px) {
+  .slide { flex: 0 0 30%; }
+}
+
+/* Mobile adjustments: <600px */
+@media (max-width: 599px) {
+  .logo { font-size: 1.5rem; }
+  .nav-right { gap: 0.5rem; }
+  .nav-btn { padding: 0.4rem 0.8rem; }
+  .catchphrase h1 { 
+    font-size: 2rem;
+    white-space: normal;
+    animation: none;
+    border-right: none;
+  }
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: block; }
+  .nav-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--secondary);
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .nav-items.active { display: flex; }
+}
+.faculty-card img {
+  width: 100%;
+  height: auto;
+  max-width: 70px;
+}
+.faculty-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.nav-btn, .register-btn {
+  min-width: 44px;
+  min-height: 44px;
 }
