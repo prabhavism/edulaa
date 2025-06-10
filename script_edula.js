@@ -1,4 +1,30 @@
+// --- Hamburger Menu Functionality ---
+function toggleMenu() {
+  const navRight = document.getElementById('navRight');
+  navRight.classList.toggle('nav-responsive');
+}
 
+// Close menu when clicking outside the navbar (on mobile)
+document.addEventListener('click', function(event) {
+  const navRight = document.getElementById('navRight');
+  const hamburger = document.querySelector('.hamburger');
+  // Only close if menu is open and click is outside navbar and hamburger
+  if (
+    navRight.classList.contains('nav-responsive') &&
+    !event.target.closest('.navbar')
+  ) {
+    navRight.classList.remove('nav-responsive');
+  }
+});
+
+// Close menu on ESC key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('navRight').classList.remove('nav-responsive');
+  }
+});
+
+// --- Course and Faculty Rendering ---
 const subjects = [
   {
     name: "Mathematics",
@@ -96,19 +122,13 @@ function registerSubject(subjectName) {
   window.location.href = 'register.html';
 }
 
+// --- Search Functionality ---
 function searchCourses() {
   const query = document.getElementById("searchInput").value.trim().toLowerCase();
   if (!query) {
     renderSlides(subjects);
     return;
   }
-  function toggleMenu() {
-  const nav = document.getElementById('navItems');
-  const btn = document.querySelector('.hamburger');
-  const expanded = nav.classList.toggle('active');
-  btn.setAttribute('aria-expanded', expanded);
-}
-
   const filtered = subjects.filter(s =>
     s.name.toLowerCase().includes(query) ||
     s.faculty.toLowerCase().includes(query) ||
@@ -122,24 +142,22 @@ document.getElementById("searchInput").addEventListener("keyup", function(e) {
   else if (!this.value) renderSlides(subjects);
 });
 
+// --- Modal Functionality ---
 function openContactModal() {
   document.getElementById('contactModal').style.display = 'flex';
   document.body.style.overflow = 'hidden'; // Prevent background scroll
 }
 function closeContactModal() {
   document.getElementById('contactModal').style.display = 'none';
-  document.body.style.overflow = ''; // Restore scrol
+  document.body.style.overflow = ''; // Restore scroll
 }
-function toggleMenu() {
-  document.getElementById('navItems').classList.toggle('active');
-}
-
 document.getElementById('contactModal').addEventListener('click', function(e) {
   if (e.target === this) closeContactModal();
 });
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeContactModal();
 });
-}
+
+// --- Initial Rendering ---
 renderSlides(subjects);
 renderFaculties();
