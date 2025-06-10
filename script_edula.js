@@ -121,8 +121,12 @@ function openContactModal() {
 }
 function closeContactModal() {
   document.getElementById('contactModal').style.display = 'none';
-  document.body.style.overflow = ''; // Restore scroll
+  document.body.style.overflow = ''; // Restore scrol
 }
+function toggleMenu() {
+  document.getElementById('navItems').classList.toggle('active');
+}
+
 document.getElementById('contactModal').addEventListener('click', function(e) {
   if (e.target === this) closeContactModal();
 });
