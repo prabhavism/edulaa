@@ -9,38 +9,38 @@
 </head>
 <body>
   <!-- Header/Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-left"></div>
-      <div class="logo">
-        <a href="dashboard.html" style="text-decoration: none; color: inherit;">
-          <span style="font-size:2.2rem; vertical-align:middle;">🎓Edula</span>
-        </a>
-      </div>
-      <div class="nav-right">
-        <div class="search-bar">
-          <input type="text" id="searchInput" placeholder="Search courses...">
-          <span class="search-icon" onclick="searchCourses()">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-          </span>
-        </div>
-        <button class="profile-btn" id="profileBtn" title="Profile" tabindex="0">
-          <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <circle cx="12" cy="7" r="4"/>
-            <path d="M5.5 21a8.38 8.38 0 0 1 13 0"/>
+ <header>
+  <nav class="navbar">
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open navigation">&#9776;</button>
+    <div class="logo">
+      <a href="dashboard.html" style="text-decoration: none; color: inherit;">
+        <span style="font-size:2.2rem; vertical-align:middle;">🎓Edula</span>
+      </a>
+    </div>
+    <div class="nav-items" id="navItems">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search courses...">
+        <span class="search-icon" onclick="searchCourses()">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
-        </button>
-        <div class="profile-dropdown" id="profileDropdown">
-          <a href="myprofile.html">My Profile</a>
-          <a href="#">Settings</a>
-          <button onclick="logout()">Logout</button>
-        </div>
+        </span>
       </div>
-    </nav>
-  </header>
+      <button class="profile-btn" id="profileBtn" title="Profile" tabindex="0">
+        <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="7" r="4"/>
+          <path d="M5.5 21a8.38 8.38 0 0 1 13 0"/>
+        </svg>
+      </button>
+      <div class="profile-dropdown" id="profileDropdown">
+        <a href="myprofile.html">My Profile</a>
+        <a href="#">Settings</a>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+</header>
 
 
   <section class="course-section">

@@ -9,27 +9,32 @@
 </head>
 <body>
   <!-- Header/Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="nav-left"></div>
-      <div class="logo">
-        <span style="font-size:2.2rem; vertical-align:middle;">🎓</span> Edula
+<header>
+  <nav class="navbar">
+    <!-- Hamburger button (hidden on desktop, visible on mobile) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open navigation">
+      &#9776;
+    </button>
+    <div class="logo">
+      <span style="font-size:2.2rem; vertical-align:middle;">🎓</span> Edula
+    </div>
+    <!-- Navigation items (search + buttons) -->
+    <div class="nav-items" id="navItems">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search courses..." />
+        <span class="search-icon" onclick="searchCourses()">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </span>
       </div>
-      <div class="nav-right">
-        <div class="search-bar">
-          <input type="text" id="searchInput" placeholder="Search courses..." />
-          <span class="search-icon" onclick="searchCourses()">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-          </span>
-        </div>
-        <button class="nav-btn" onclick="window.location.href='login.html'">Login</button>
-        <button class="nav-btn" onclick="window.location.href='register.html'">Register</button>
-      </div>
-    </nav>
-  </header>
+      <button class="nav-btn" onclick="window.location.href='login.html'">Login</button>
+      <button class="nav-btn" onclick="window.location.href='register.html'">Register</button>
+    </div>
+  </nav>
+</header>
+
 
   <!-- Typewriter Animation Section -->
   <section class="catchphrase-container">
@@ -95,5 +100,10 @@
 
   <!-- Scripts -->
   <script src="script_edula.js"></script>
+  function toggleMenu() {
+  const nav = document.getElementById('navItems');
+  nav.classList.toggle('active');
+}
+
 </body>
 </html>

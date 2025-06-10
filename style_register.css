@@ -124,3 +124,41 @@ body {
 .login-link a:hover {
   text-decoration: underline;
 }
+@media (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+  .register-container {
+    padding: 1rem 0.5rem;
+    max-width: 98vw;
+    border-radius: 8px;
+  }
+  .register-container h1 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .form-group input {
+    padding: 0.6rem;
+    font-size: 0.98rem;
+  }
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .register-container {
+    padding: 0.5rem 0.2rem;
+  }
+  .logo {
+    font-size: 1rem;
+  }
+}
