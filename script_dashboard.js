@@ -161,6 +161,10 @@ function viewRegisteredSubject(subject) {
   const filename = subject.toLowerCase() + ".html";
   window.location.href = filename;
 }
+  function toggleMenu() {
+  document.getElementById('navItems').classList.toggle('active');
+}
+
 
 renderSlides("runningCourses", runningCourses, "Continue", "goToSubjectPage");
 renderSlides("registeredCourses", registeredCourses, "View", "viewRegisteredSubject");
