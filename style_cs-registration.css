@@ -107,3 +107,73 @@ footer {
   width: 100%;
   box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
 }
+@media (max-width: 900px) {
+  section.course-info,
+  form {
+    max-width: 98vw;
+    padding: 22px 8px;
+  }
+  section.course-info h2 {
+    font-size: 1.5rem;
+  }
+  form h3 {
+    font-size: 1.3rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 14px 4px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+  }
+  section.course-info,
+  form {
+    padding: 10px 2vw;
+    border-radius: 7px;
+    margin: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  section.course-info h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  section.course-info p,
+  label {
+    font-size: 0.98rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  select {
+    font-size: 0.98rem;
+    padding: 10px 8px;
+  }
+  button {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+  footer {
+    font-size: 0.95rem;
+    padding: 10px 2px;
+  }
+}
+
+@media (max-width: 400px) {
+  section.course-info,
+  form {
+    padding: 6px 1vw;
+  }
+  header h1 {
+    font-size: 1rem;
+  }
+  form h3 {
+    font-size: 1rem;
+  }
+}
