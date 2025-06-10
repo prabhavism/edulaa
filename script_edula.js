@@ -1,4 +1,3 @@
-
 const subjects = [
   {
     name: "Mathematics",
@@ -59,6 +58,7 @@ const faculties = [
   }
 ];
 
+// Renders the subject cards
 function renderSlides(subjectsArr) {
   const slidesContainer = document.getElementById("slidesContainer");
   slidesContainer.innerHTML = "";
@@ -76,6 +76,7 @@ function renderSlides(subjectsArr) {
   });
 }
 
+// Renders the faculty cards
 function renderFaculties() {
   const facultyList = document.getElementById("facultyList");
   facultyList.innerHTML = "";
@@ -92,23 +93,18 @@ function renderFaculties() {
   });
 }
 
+// Redirect to register page
 function registerSubject(subjectName) {
   window.location.href = 'register.html';
 }
 
+// Search functionality
 function searchCourses() {
   const query = document.getElementById("searchInput").value.trim().toLowerCase();
   if (!query) {
     renderSlides(subjects);
     return;
   }
-  function toggleMenu() {
-  const nav = document.getElementById('navItems');
-  const btn = document.querySelector('.hamburger');
-  const expanded = nav.classList.toggle('active');
-  btn.setAttribute('aria-expanded', expanded);
-}
-
   const filtered = subjects.filter(s =>
     s.name.toLowerCase().includes(query) ||
     s.faculty.toLowerCase().includes(query) ||
@@ -117,29 +113,43 @@ function searchCourses() {
   renderSlides(filtered);
 }
 
-document.getElementById("searchInput").addEventListener("keyup", function(e) {
-  if (e.key === "Enter") searchCourses();
-  else if (!this.value) renderSlides(subjects);
-});
+// Hamburger menu toggle
+function toggleMenu() {
+  const nav = document.getElementById('navItems');
+  const btn = document.querySelector('.hamburger');
+  const expanded = nav.classList.toggle('active');
+  btn.setAttribute('aria-expanded', expanded);
+}
 
+// Modal open/close handlers
 function openContactModal() {
   document.getElementById('contactModal').style.display = 'flex';
-  document.body.style.overflow = 'hidden'; // Prevent background scroll
-}
-function closeContactModal() {
-  document.getElementById('contactModal').style.display = 'none';
-  document.body.style.overflow = ''; // Restore scrol
-}
-function toggleMenu() {
-  document.getElementById('navItems').classList.toggle('active');
+  document.body.style.overflow = 'hidden';
 }
 
-document.getElementById('contactModal').addEventListener('click', function(e) {
-  if (e.target === this) closeContactModal();
-});
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeContactModal();
-});
+function closeContactModal() {
+  document.getElementById('contactModal').style.display = 'none';
+  document.body.style.overflow = '';
 }
-renderSlides(subjects);
-renderFaculties();
+
+// Modal close on backdrop or escape
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("searchInput").addEventListener("keyup", function(e) {
+    if (e.key === "Enter") searchCourses();
+    else if (!this.value) renderSlides(subjects);
+  });
+
+  const modal = document.getElementById('contactModal');
+  if (modal) {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) closeContactModal();
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContactModal();
+  });
+
+  renderSlides(subjects);
+  renderFaculties();
+});
